@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Cool Website</title>
+
+        <style>
+            img {
+                width: 600px;
+                height: auto;
+            }
+            h1 {
+                color: red;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>My Cool Website</h1>
+        <p>I think HTML is cool!!!!!!</p>
+
+        <img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1440">
+        <blockquote>"cool car - someone</blockquote>
+        <button onclick="changeQuote()">Change Quote</button>
+        <script>
+            var index = 0;
+            function changeQuote() {
+                var quotes = [
+                    `"i like food" - me`,
+                    `"I like water" - me`,
+                    `"cool" - me`,
+                    `"on skibidi" - rishi`,
+                    `"cool car" - someone`
+                    
+                ];
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+                index++;
+                if (index >= 4) {
+                    index = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
